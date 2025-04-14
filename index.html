@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>故事后台管理系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .active-menu {
+        background-color: #f3f4f6;
+        border-left: 4px solid #3b82f6;
+      }
+      iframe {
+        height: calc(100vh - 64px);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- 顶部导航 -->
+    <header class="bg-white shadow-sm">
+      <div class="flex justify-between items-center px-4 py-4">
+        <div class="flex items-center">
+          <h1 class="text-xl font-semibold text-gray-900 ml-4">
+            故事后台管理系统
+          </h1>
+        </div>
+        <div class="flex items-center space-x-4 mr-4">
+          <span class="text-sm text-gray-500">管理员</span>
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white"
+          >
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex">
+      <!-- 侧边栏菜单 -->
+      <aside class="w-64 bg-white shadow-sm h-screen sticky top-0">
+        <nav class="mt-6">
+          <div class="px-4 py-2">
+            <h3
+              class="text-xs font-semibold text-gray-500 uppercase tracking-wider"
+            >
+              内容管理
+            </h3>
+          </div>
+          <ul>
+            <li>
+              <a
+                href="story/list.html"
+                target="contentFrame"
+                class="flex items-center px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 active-menu"
+              >
+                <i class="fas fa-book mr-3"></i>故事管理
+              </a>
+            </li>
+            <li>
+              <a
+                href="story/type/list.html"
+                target="contentFrame"
+                class="flex items-center px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                <i class="fas fa-tags mr-3"></i>故事类型
+              </a>
+            </li>
+            <li>
+              <a
+                href="story/theme/list.html"
+                target="contentFrame"
+                class="flex items-center px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                <i class="fas fa-palette mr-3"></i>故事主题
+              </a>
+            </li>
+            <li>
+              <a
+                href="story/collection/list.html"
+                target="contentFrame"
+                class="flex items-center px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                <i class="fas fa-layer-group mr-3"></i>故事集
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- 主内容区1 -->
+      <main class="flex-1">
+        <iframe
+          name="contentFrame"
+          src="story/list.html"
+          class="w-full border-0"
+          frameborder="0"
+        ></iframe>
+      </main>
+    </div>
+  </body>
+</html>

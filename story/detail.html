@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>故事详情</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 p-6">
+    <div class="bg-white rounded-lg shadow overflow-hidden">
+      <!-- 头部标题和操作按钮 -->
+      <div
+        class="border-b border-gray-200 px-6 py-4 flex justify-between items-center"
+      >
+        <h2 class="text-xl font-semibold text-gray-800">故事详情</h2>
+        <div class="space-x-3">
+          <button
+            class="px-4 py-2 border border-blue-600 rounded-md text-sm font-medium text-blue-600 bg-white hover:bg-blue-50"
+          >
+            <i class="fas fa-edit mr-1"></i>编辑
+          </button>
+          <button
+            class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700"
+          >
+            <i class="fas fa-arrow-down mr-1"></i>下架
+          </button>
+        </div>
+      </div>
+
+      <!-- 主要内容区 -->
+      <div class="p-6">
+        <!-- 基本信息 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div>
+            <h3 class="text-lg font-medium text-gray-900 mb-4">基本信息</h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-500"
+                  >故事名称</label
+                >
+                <p class="mt-1 text-sm text-gray-900">小兔子乖乖</p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-500"
+                  >故事别名</label
+                >
+                <p class="mt-1 text-sm text-gray-900">小白兔的故事、乖乖兔</p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-500"
+                  >故事类型</label
+                >
+                <p class="mt-1 text-sm text-gray-900">童话故事</p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-500"
+                  >故事主题</label
+                >
+                <p class="mt-1 text-sm text-gray-900">诚实、安全</p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-500"
+                  >故事集</label
+                >
+                <p class="mt-1 text-sm text-gray-900">睡前故事集</p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-500"
+                  >适合年龄</label
+                >
+                <p class="mt-1 text-sm text-gray-900">4-6岁</p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-500"
+                  >状态</label
+                >
+                <span
+                  class="mt-1 px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                  >已上架</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 多媒体区域 -->
+          <div>
+            <h3 class="text-lg font-medium text-gray-900 mb-4">多媒体内容</h3>
+            <div class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2"
+                  >故事封面</label
+                >
+                <div
+                  class="w-full h-48 bg-gray-100 rounded-md overflow-hidden flex items-center justify-center"
+                >
+                  <img
+                    src="https://via.placeholder.com/300x200?text=故事封面"
+                    alt="故事封面"
+                    class="max-h-full max-w-full"
+                  />
+                </div>
+                <p class="mt-2 text-xs text-gray-500">
+                  封面描述：可爱的小兔子在门口
+                </p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2"
+                  >故事音频</label
+                >
+                <div class="bg-gray-100 p-4 rounded-md">
+                  <audio controls class="w-full">
+                    <source src="audio.mp3" type="audio/mpeg" />
+                    您的浏览器不支持音频元素。
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 故事内容 -->
+        <div class="mb-8">
+          <h3 class="text-lg font-medium text-gray-900 mb-4">故事内容</h3>
+          <div class="bg-gray-50 p-4 rounded-md">
+            <p class="text-sm text-gray-800 leading-relaxed">
+              从前有只小兔子，妈妈出门前告诉它："不要给陌生人开门"。大灰狼来敲门，小兔子通过声音识别出不是妈妈，就没有开门...
+            </p>
+          </div>
+        </div>
+
+        <!-- 教育意义 -->
+        <div class="mb-8">
+          <h3 class="text-lg font-medium text-gray-900 mb-4">教育意义</h3>
+          <div class="bg-gray-50 p-4 rounded-md">
+            <p class="text-sm text-gray-800 leading-relaxed">
+              教育孩子要听父母的话，不要给陌生人开门，提高安全意识。
+            </p>
+          </div>
+        </div>
+
+        <!-- 更新日志 -->
+        <div>
+          <h3 class="text-lg font-medium text-gray-900 mb-4">更新日志</h3>
+          <div class="border border-gray-200 rounded-md overflow-hidden">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    版本
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    更新时间
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    更新内容
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    v1.0.1
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2023-05-15
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-500">
+                    优化了音频质量
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    v1.0.0
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2023-05-10
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-500">初始版本发布</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
